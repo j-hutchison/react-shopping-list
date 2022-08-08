@@ -1,0 +1,27 @@
+.ticker {
+	margin-left: auto;
+	color: var(---orange-main);
+	background-color: #fff;
+
+	display: flex;
+	gap: 0.25rem;
+	justify-content: space-between;
+
+	border-radius: 20px;
+
+	font-size: 2.4rem;
+	width: 7.2rem;
+}
+
+.ticker a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(---orange-main);
+	font-size: 2.4rem;
+	padding: 0.1rem 0.75rem;
+}
+
+.ticker a:hover,
+.ticker a:active {
+	color: var(---orange-bright);
+}

@@ -1,0 +1,29 @@
+.shopping-listitem {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 2rem 0;
+	border-bottom: 1px solid var(---orange-light);
+}
+.item-status {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	width: 30px;
+	height: 30px;
+
+	border-radius: 50%;
+}
+
+.item-status-check {
+	color: var(---orange-main);
+	font-size: 2.2rem;
+}
+
+.item-name {
+}
+
+.completed {
+	text-decoration: line-through;
+}

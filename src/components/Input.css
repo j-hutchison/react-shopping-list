@@ -1,0 +1,33 @@
+.input-toolbar {
+	position: relative;
+}
+.input-searchbar {
+	width: 100%;
+	background-color: var(---orange-light);
+
+	border: none;
+	padding: 1rem;
+	border-radius: 8px;
+
+	font-size: 2.4rem;
+	box-shadow: 0px 0px 15px rgba(53, 53, 53, 0.103);
+	color: var(---orange-main);
+}
+.input-searchbar::placeholder {
+	color: var(---orange-main);
+}
+
+.input-add-btn {
+	position: absolute;
+	top: 50%;
+	right: 3%;
+	transform: translateY(-50%);
+
+	font-size: 2.4rem;
+	color: var(---orange-main);
+}
+
+.input-add-btn:hover,
+.input-add-btn:active {
+	color: var(---orange-bright);
+}

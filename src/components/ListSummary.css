@@ -1,0 +1,11 @@
+.shopping-list-summary {
+	display: flex;
+	justify-content: end;
+
+	margin-top: 1rem;
+}
+
+.shopping-list-total {
+	color: #fff;
+	font-size: 2.4rem;
+}

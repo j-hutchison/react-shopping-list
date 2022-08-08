@@ -1,0 +1,10 @@
+.shopping-list {
+	color: #fff;
+
+	margin-top: 2rem;
+	list-style: none;
+	font-size: 2.4rem;
+
+	text-transform: lowercase;
+	font-weight: 500;
+}
