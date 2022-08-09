@@ -4,24 +4,28 @@
 	background-color: #fff;
 
 	display: flex;
-	gap: 0.25rem;
-	justify-content: space-between;
+	align-items: center;
+	/* gap: 0.25rem; */
+	justify-content: space-around;
 
 	border-radius: 20px;
-
-	font-size: 2.4rem;
-	width: 7.2rem;
+	min-width: 6.2rem;
 }
 
-.ticker a {
-	display: inline-block;
+.ticker button {
 	text-decoration: none;
 	color: var(---orange-main);
-	font-size: 2.4rem;
-	padding: 0.1rem 0.75rem;
+	font-size: 2rem;
+
+	margin: 0 0.5rem;
+
+	border: none;
+	background-color: transparent;
+	/* overflow: hidden; */
+	cursor: pointer;
 }
 
-.ticker a:hover,
-.ticker a:active {
+.ticker button:hover,
+.ticker button:active {
 	color: var(---orange-bright);
 }

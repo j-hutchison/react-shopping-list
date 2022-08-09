@@ -1,16 +1,24 @@
 import React from "react";
 import "./Ticker.css";
 
-const Ticker = (props) => {
+const Ticker = ({
+	quantity,
+	onAddQuantityBtnClick,
+	onSubtractQuantityBtnClick,
+}) => {
 	return (
 		<div className="ticker">
-			<a href="">
+			<div
+				className="ticker-btn"
+				onClick={onSubtractQuantityBtnClick}
+				value="-"
+			>
 				<i className="fa-solid fa-angle-left"></i>
-			</a>
-			{props.quantity}
-			<a href="">
+			</div>
+			{quantity}
+			<div className="ticker-btn" onClick={onAddQuantityBtnClick} value="+">
 				<i className="fa-solid fa-angle-right"></i>
-			</a>
+			</div>
 		</div>
 	);
 };

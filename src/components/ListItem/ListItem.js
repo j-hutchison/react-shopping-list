@@ -3,18 +3,29 @@ import "./ListItem.css";
 
 import Ticker from "./Ticker";
 
-const ListItem = ({ quantity, name, complete }) => {
-	const onCompleteBtnClick = () => {};
-
+const ListItem = ({
+	item,
+	onCompleteClick,
+	onAddQuantityBtnClick,
+	onSubtractQuantityBtnClick,
+}) => {
 	return (
 		<li className="shopping-listitem">
-			<div className="item-status">
-				<a href="" onClick={onCompleteBtnClick}>
-					{complete && <i className="fa-solid fa-check item-status-check"></i>}
+			<div className="item-status" onClick={onCompleteClick}>
+				<a href="#">
+					{item.complete && (
+						<i className="fa-solid fa-check item-status-check"></i>
+					)}
 				</a>
 			</div>
-			<span className={`item-name ${complete && "completed"}`}>{name}</span>
-			<Ticker quantity={quantity}></Ticker>
+			<span className={`item-name ${item.complete && "completed"}`}>
+				{item.name}
+			</span>
+			<Ticker
+				quantity={item.quantity}
+				onAddQuantityBtnClick={onAddQuantityBtnClick}
+				onSubtractQuantityBtnClick={onSubtractQuantityBtnClick}
+			></Ticker>
 		</li>
 	);
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./App.css";
 import Input from "./components/Input";
@@ -32,9 +32,9 @@ function App() {
 			const newItemList = [...itemList, newItem];
 			return newItemList;
 		});
-	};
 
-	const handleCompleteBtnClick = () => {};
+		setTotal(() => total + 1);
+	};
 
 	const [total, setTotal] = useState(3);
 	const [itemList, setItemList] = useState(data);
@@ -43,7 +43,12 @@ function App() {
 		<div className="App">
 			<form className="shopping-list-form">
 				<Input onClick={handleAddBtnClick}></Input>
-				<List itemList={itemList}></List>
+				<List
+					itemList={itemList}
+					setItemList={setItemList}
+					total={total}
+					setTotal={setTotal}
+				></List>
 				<ListSummary total={total}></ListSummary>
 			</form>
 		</div>
