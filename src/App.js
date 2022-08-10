@@ -33,7 +33,7 @@ function App() {
 			return newItemList;
 		});
 
-		setTotal(() => total + 1);
+		setTotal((prevTotal) => prevTotal + 1);
 	};
 
 	const [total, setTotal] = useState(3);

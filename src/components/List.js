@@ -14,7 +14,7 @@ const List = (props) => {
 		let newItemList = [...props.itemList];
 
 		newItemList[index].quantity = newItemList[index].quantity + 1;
-		props.setTotal(() => props.total + 1);
+		props.setTotal((prevTotal) => prevTotal + 1);
 
 		props.setItemList(() => newItemList);
 	};
@@ -23,7 +23,7 @@ const List = (props) => {
 		let newItemList = [...props.itemList];
 
 		newItemList[index].quantity = newItemList[index].quantity - 1;
-		props.setTotal(() => props.total - 1);
+		props.setTotal((prevTotal) => prevTotal - 1);
 
 		props.setItemList(() => newItemList);
 	};
